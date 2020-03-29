@@ -1,0 +1,251 @@
+<html>
+    <head>
+        <title>Curso Javascript</title>
+        <meta charset="UTF-8">
+    </head>
+    <body>
+        <script>
+            console.log('Hello World');
+            //javascript
+            var nome = "Alexandre"; //valor string
+            var idade = 40; //valor inteiro
+            var peso = 99.93; //valor float
+            var humano = true; //valor boleano
+            var alunos = ['Alexandre', 'Gabriel', 'Lucas']; //valor de vetores
+            var aluno = {
+                nome: 'Alexandre',
+                idade: 39,
+                peso: 99.95,
+                humano:true
+            }; //valor de objetos
+            var aluno1 = {
+                nome: alunos[1],
+                idade: 32,
+                peso: 78.87,
+                humano:false
+            };
+            console.log(nome);
+            console.log(idade);
+            console.log(peso);
+            console.log(humano);
+            console.log(alunos);
+            console.log(aluno);
+            console.log(alunos[2]);
+            console.log(alunos[1]);
+            console.log(alunos[0]);
+            console.log(aluno.humano);
+            console.log(aluno.peso);
+            console.log(aluno.idade);
+            console.log(aluno.nome);
+            console.log(aluno1);
+            var aluno1 = {
+                nome: alunos[2],
+                idade: 62,
+                peso: 87.59,
+                humano:true
+            };
+            console.log(aluno1);
+        </script>
+        <script>
+            //operações matemáticos
+            var x = 10, y = 5;
+            console.log(x, y);
+            var resultado = x + y;
+            console.log(resultado);
+            var resultado = x - y;
+            console.log(resultado);
+            var resultado = x * y;
+            console.log(resultado);
+            var resultado = x / y;
+            console.log(resultado);
+            var resultado = x % y;
+            console.log(resultado);
+            x = x + 3;
+            console.log(x);
+        </script>
+        <script>
+            //funções
+            function soma(numero1, numero2){
+                var resultado = numero1 + numero2;
+
+                return resultado;
+            }
+
+            var resultado = soma(1, 2);
+            console.log(resultado);
+        </script>
+        <script>
+            //condicionais
+            function retornaSexo(sexo){
+                if(sexo === 'M'){
+                    return 'Masculino';
+                }
+                else if(sexo === 'F'){
+                    return 'Feminino';
+                }
+                else{
+                    return 'Outro';
+                }
+            }
+            var resultado = retornaSexo('M');
+            console.log(resultado);
+            var resultado1 = retornaSexo('F');
+            console.log(resultado1);
+            var resultado2 = retornaSexo('A');
+            console.log(resultado2);
+
+
+            function retornaSex(sexo){
+                switch (sexo){
+                    case 'M':
+                        return 'Masculino';
+                    case 'F':
+                        return 'Feminino';
+                    default:
+                        return 'Outro';
+                }
+            }
+            var result = retornaSex('M');
+            console.log(resultado);
+            var result1 = retornaSex('F');
+            console.log(resultado1);
+            var result2 = retornaSex('A');
+            console.log(resultado2);
+        </script>
+        <script>
+            //operadores logicos
+            var sexo ='M', idade = 23;
+            if(sexo === 'M' && idade >= 18){
+                console.log('OK 1');
+            }
+            if(sexo === 'F' && idade >= 18){
+                console.log('OK 2');
+            }
+            if(sexo === 'M' && idade < 18){
+                console.log('OK 3');
+            }
+            if(sexo === 'M' || idade >= 18){
+                console.log('OK 4');
+            }
+            if(sexo === 'F' || idade >= 18){
+                console.log('OK 5');
+            }
+            if(sexo === 'M' || idade < 18){
+                console.log('OK 6');
+            }
+            if(sexo !== 'F'){
+                console.log('OK 7');
+            }
+            if(sexo !== 'M'){
+                console.log('Ok 8');
+            }
+        </script>
+        <script>
+            //condição ternária
+            var sexo = 'M';
+            var retorno = (sexo === 'M')?'Masculino':'Feminino';
+            console.log(retorno);
+        </script>
+        <script>
+            //estruturas de repetições
+            for(var i = 0; i <= 100; i++){
+                console.log(i);
+            }
+
+
+            var j = 0;
+            while(j <= 100){
+                console.log(j);
+                j++;
+            }
+        </script>
+        <script>
+            //intervalo
+            function exibirAlgo(){
+                console.log('Hello Word');
+            }
+            setInterval(exibirAlgo, 1000);
+
+
+            //timeout
+            function exibirAlgo1(){
+                console.log('Hello Word');
+            }
+            setTimeout(exibirAlgo1, 1000);
+        </script>
+        <script>
+            //Exercicio 1
+            var endereco = {
+                rua: "Rua dos Pinheiros",
+                numero: 1293,
+                bairro: "Centro",
+                cidade: "São Paulo",
+                uf: "SP"
+            };
+            console.log('O usuário mora em ' + endereco.cidade + ' / ' + endereco.uf + ', no bairro ' + endereco.bairro + ', na rua "' + endereco.rua + '" com nº ' + endereco.numero + '.');
+        </script>
+        <script>
+            //Exercicio 2
+            function pares(x, y){
+                while(x <= y){
+                   var retorno = x % 2;
+                   if(retorno == 0){
+                       console.log(x);
+                   }
+                   x++;
+                }
+            }
+            pares(32,321);
+        </script>
+        <script>
+            //Exercicio 3
+            function temHabilidade(skills){
+                var posicao = skills.indexOf("Javascript");
+                if(posicao > -1){
+                    return true;
+                }
+                else{
+                    return false;
+                }
+            }
+            var skills = ["Javascript", "ReactJS", "React Native"];
+            var retorno = temHabilidade(skills);
+            console.log(retorno);
+        </script>
+        <script>
+            //Exercicio 4
+            function experiencia(anos){
+                if(anos <= 1){
+                    console.log('Iniciante');
+                }
+                else if(anos >= 1 && anos <= 3){
+                    console.log('Intermediário');
+                }
+                else if(anos >=3 && anos <= 6){
+                    console.log('Avançado');
+                }
+                else if(anos >= 7){
+                    console.log('Jedi Master');
+                }
+            }
+            var anosEstudados = 7;
+            experiencia(anosEstudados);
+        </script>
+        <script>
+            //Exercicio 5
+            var usuarios = [
+                {
+                    nome: "Diego",
+                    habilidades: ["Javascript", "ReactJS", "Redux"]
+                },
+                {
+                    nome: "Gabriel",
+                    habilidades: ["VueJS", "Ruby on Rails", "Elixir"]
+                }
+            ];
+            for(var i = 0; i < usuarios.length; i++){
+                console.log("O " + usuarios[i].nome + " possui as habilidades: " + usuarios[i].habilidades.join(", "));
+            }
+        </script>
+    </body>
+</html>
